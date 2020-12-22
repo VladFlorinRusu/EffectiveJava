@@ -22,6 +22,15 @@ public class NutritionFacts {
         this.carbohydrate = builder.carbohydrate;
     }
 
+    public boolean isHealtyDiet() {
+        boolean isHealthy = true;
+        if (calories > 5000) {
+            isHealthy = false;
+        }
+        return isHealthy;
+    }
+    
+
     public static class Builder {
         private final int servingSize;
         private final int servings;
